@@ -1,0 +1,19 @@
+﻿
+@model Empolyee
+@{
+    ViewData["Title"] = "GetEmpolyee";
+}
+@section Style
+{
+    <Link  rel="stylesheet" href="~/css/site.css"/>
+}
+
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="~/Kudvenkat/images/img_avatar1.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">@Model.Name</h4>
+    <p class="card-text">@Model.Address</p>
+    <a  asp-controller="Kud" asp-action="ListofEmpolyee" class="btn btn-primary">Back</a>
+    <a href="#" class="btn btn-primary">Edit</a>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+﻿
+@model List<Empolyee> 
+
+@{
+    ViewData["Title"] = "ListofEmpolyee";
+}
+
+@section Style
+{
+    <link href="h:\software engineering\devskill-asp.net mvc\practice\practice\asp.net practice\wwwroot\css\site.css" rel="stylesheet" />
+}
+
+    <div class="conatainer">
+        <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-lg-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="~/Kudvenkat/images/img_avatar1.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">@item.Name</h4>
+                        <p class="card-text">@item.Department</p>
+                        <a asp-controller="Kud" asp-action="GetEmpolyee" asp-route-id="@item.Id" class="btn btn-primary">See Profile</a>
+                        <a href="#" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </div>
+    
+        }
+    </div>
+
+</div>
+
+
+
